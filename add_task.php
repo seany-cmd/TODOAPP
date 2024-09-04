@@ -1,11 +1,15 @@
 <?php
+
+// start session (we will be using session in this page)
+session_start();
+
  // 1. collect database info
  $host = "127.0.0.1";
  $database_name = "todoapp";
  $database_user = "root";
  $database_password = "";
 
- //2. connect to database PDO - PHP database object)
+ //2. connect to database PDO - php database object)
  $database = new PDO(
   "mysql:host=$host;dbname=$database_name",
   $database_user,
@@ -28,7 +32,7 @@
         ]);
         
         // 3. redirect the user back to index.php
-        header("Location: index.php");
+        header("Location: /");
         exit;
     }
 

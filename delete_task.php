@@ -1,4 +1,8 @@
 <?php
+
+// start session (we will be using session in this page)
+session_start();
+
  // 1. collect database info
  $host = "127.0.0.1";
  $database_name = "todoapp";
@@ -24,5 +28,5 @@
     ]);
 
     // redirect back to index.php
-    header("Location: index.php");
+    header("Location: /");
     exit;
